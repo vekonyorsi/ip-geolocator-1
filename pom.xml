@@ -8,9 +8,9 @@
 	<description>Java class library for obtaining geolocation information of an IP address.</description>
 	<developers>
 		<developer>
-			<id>jeszy</id>
-			<name>Péter Jeszenszky</name>
-			<email>jeszenszky.peter@inf.unideb.hu</email>
+			<id>vekonyorsi</id>
+			<name>Vékony Orsolya</name>
+			<email>vekonyorsii@gmail.com</email>
 			<organization>Faculty of Informatics, University of Debrecen</organization>
 			<organizationUrl>http://www.inf.unideb.hu/</organizationUrl>
 		</developer>
@@ -18,7 +18,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.build.outputEncoding>UTF-8</project.build.outputEncoding>
-		<maven.compiler.release>11</maven.compiler.release>
+		<maven.compiler.release>15</maven.compiler.release>
 		<jackson-databind.version>2.12.1</jackson-databind.version>
 		<mainClass>geolocator.GeoLocator</mainClass>
 	</properties>
@@ -41,12 +41,7 @@
 			<version>${jackson-databind.version}</version>
 			<scope>compile</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.18.18</version>
-			<scope>compile</scope>
-		</dependency>
+
 	</dependencies>
 	<build>
 		<plugins>
@@ -63,19 +58,7 @@
 					<mainClass>${mainClass}</mainClass>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.projectlombok</groupId>
-				<artifactId>lombok-maven-plugin</artifactId>
-				<version>1.18.16.0</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>delombok</goal>
-						</goals>
-						<phase>generate-sources</phase>
-					</execution>
-				</executions>
-			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
@@ -157,7 +140,7 @@
 	<distributionManagement>
 		<site>
 			<id>shrek</id>
-			<url>scp://@shrek.unideb.hu:2222/home/jeszy/public_html/${project.artifactId}</url>
+			<url>scp://vekonyorsi@shrek.unideb.hu:2222/home/vekonyorsi/public_html/${project.artifactId}</url>
 		</site>
 	</distributionManagement>
 </project>
